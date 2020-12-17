@@ -200,4 +200,19 @@ hr {
     font-size: 10px;
     overflow-x: hidden;
   }
+  .horizontal-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-hide {
+    display: none;
+  }
+  .horizontal-list h3 {
+    padding-top: 2em;
+  }
+  .copy-rights {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 }

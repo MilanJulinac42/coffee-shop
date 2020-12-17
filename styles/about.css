@@ -1,0 +1,65 @@
+.heading {
+  background: #151412;
+  padding: 3em;
+}
+
+.heading p {
+  color: #c7a17a;
+  text-align: center;
+  font-style: italic;
+}
+
+.title {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.title h2 {
+  color: white;
+  font-size: 4em;
+}
+
+.line {
+  border-bottom: 3px solid #c7a17a;
+  margin: 0 25px;
+  width: 30%;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.about-caffe {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+}
+
+.about-caffe h2 {
+  color: #3a2109;
+}
+
+.about-caffe p {
+  color: #646464;
+}
+
+@media screen and (max-width: 780px) {
+  .about-caffe {
+    padding: 0;
+  }
+  .content {
+    width: 100%;
+  }
+}
