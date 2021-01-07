@@ -3,7 +3,7 @@
 }
 
 .menu {
-  background: #f2f2f2;
+  background: #ac861e4f;
   padding-bottom: 5em;
 }
 
@@ -57,7 +57,7 @@
 .menu-btn {
   margin: 0 2em;
   font-size: 3em;
-  color: #c7a17a;
+  color: #3a2109;
   border: none;
   background-color: transparent;
   text-decoration: underline;
@@ -107,16 +107,19 @@
 
 .menu-items {
   position: relative;
-  height: 400px;
+  height: 1000px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-content: center;
+  overflow: hidden;
 }
 
 .item-cards .description {
   font-size: 14px;
-  color: #995f25;
+  color: #492b0e;
+  font-weight: bold;
+  margin-right: 75px;
 }
 
 .desc-section {
@@ -145,13 +148,13 @@
 
 .clipped {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: clip-path 0.5s;
+  transition: clip-path 0.3s ease-in;
 }
 
 .not-clipped {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  transition: clip-path 0.5s;
-  transition-delay: 0.5s;
+  transition: clip-path 0.3s ease-in;
+  transition-delay: 0.3s;
 }
 
 @media screen and (max-width: 780px) {
