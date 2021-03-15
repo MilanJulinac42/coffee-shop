@@ -160,6 +160,29 @@ hr {
   font-size: 12px;
 }
 
+.top-link {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 3rem;
+  height: 3rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: white;
+  -webkit-animation: bounce 2s ease-in-out infinite;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  border-radius: 50%;
+  z-index: -100;
+  background-color: #9a7d60;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
 /* ################ MEDIA ################ */
 
 @media screen and (max-width: 780px) {

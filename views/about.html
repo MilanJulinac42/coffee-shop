@@ -17,6 +17,10 @@
       src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
       data-auto-replace-svg="nest"
     ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHmU3nI-7aNNnbJY7i6PHC7OBb5HIiUtE&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
     <title>About</title>
   </head>
   <body>
@@ -39,11 +43,6 @@
         <li>
           <a href="#" class="nav-links"><i class="fas fa-mug-hot"></i>About</a>
         </li>
-        <li>
-          <a href="contact.html" class="nav-links"
-            ><i class="fas fa-mug-hot"></i>Contact</a
-          >
-        </li>
       </ul>
     </nav>
 
@@ -60,20 +59,24 @@
       </div>
 
       <div class="content">
-        <img src="../images/logo.png" alt="" />
-        <div>
-          <div class="about-caffe">
-            <h2>Coffe House</h2>
-            <p>We are located at Serbia Novi Sad Vase Pelagica 7</p>
-            <p>REST RELAX REVIVE ...</p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
-              quam aliquam, ut, fugit voluptatum repudiandae omnis veniam
-              molestias nostrum tempora in autem quod modi amet a, facilis nihil
-              laudantium magnam!
-            </p>
-            <p>Stop in today. We would love to see you.</p>
-          </div>
+        <div class="div grid-section">
+        
+            <div class="about-caffe">
+              <h2>Coffe House</h2>
+              <p>We are located at Serbia Novi Sad Vase Pelagica 7</p>
+              <p>REST RELAX REVIVE ...</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+                quam aliquam, ut, fugit voluptatum repudiandae omnis veniam
+                molestias nostrum tempora in autem quod modi amet a, facilis nihil
+                laudantium magnam!
+              </p>
+              <p>Stop in today. We would love to see you.</p>
+            </div>
+          
+        </div>
+        <div class="div grid-section">
+          <div id="map"></div>
         </div>
       </div>
     </section>
@@ -124,6 +127,7 @@
       </p>
     </section>
 
-    <script src="/index.js"></script>
+    <script src="/coffee-shop/js/about.js"></script>
+    <script src="/coffee-shop/index.js"></script>
   </body>
 </html>

@@ -1,121 +1,3 @@
-/* *,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
-  font-family: Oswald;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-} */
-
-/*#########################  NAV ######################### */
-
-/* .nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: white;
-  background-color: rgb(31, 27, 27);
-  width: 100%;
-  border-bottom: 1px solid #676666;
-}
-
-.nav-ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 30px;
-}
-
-.nav ul li {
-  padding: 5px 15px;
-  font-size: 1.4em;
-  padding-bottom: 10px;
-}
-
-.nav-header {
-  padding: 5px 0px;
-  padding-left: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-header h2 {
-  font-size: 3.5em;
-}
-
-.hamburger {
-  background-color: transparent;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  padding-right: 25px;
-  display: none;
-}
-
-.hamburger:focus {
-  outline: none;
-}
-
-.nav ul li i {
-  padding: 0 5px;
-}
-
-.nav ul li a {
-  color: white;
-  letter-spacing: 0.2em;
-  transition: 0.7s;
-}
-
-.nav ul li a:hover {
-  color: #c7a17a;
-}
-
-hr {
-  color: white;
-  background-color: white;
-}
-
-.nav-border {
-  border-bottom: 20px solid white;
-  margin: 0 25px;
-  width: 100%;
-} */
-
 /*#########################  SCROOL ######################### */
 
 .scroll-down {
@@ -253,7 +135,7 @@ header {
   height: 100vh;
   min-height: 100vh;
   background: linear-gradient(rgba(51, 34, 11, 0.8), rgba(22, 13, 1, 0.8)),
-    url("/images/coffee-4.jpg") center/cover no-repeat;
+    url("/coffee-shop/images/coffee-4.jpg") center/cover no-repeat;
 }
 
 /* ############## COFFE HOUSE ################ */
@@ -320,7 +202,7 @@ header {
 
 .opening-hours {
   background: linear-gradient(#000000c7, rgba(0, 0, 0, 0.63)),
-    url("/images/blur-image.jpg") center/cover no-repeat;
+    url("/coffee-shop/images/blur-image.jpg") center/cover no-repeat;
   height: max-content;
   border: 3px solid white;
   border-radius: 5px;
@@ -393,8 +275,8 @@ header {
 .testimonials-wrapper {
   /* background: rgb(31, 26, 22); */
   padding: 6em 0;
-  background: linear-gradient(rgb(0, 0, 0, 0.92), rgba(0, 0, 0, 0.92)),
-    url("/images/bar.jpg") center/cover no-repeat;
+  background: linear-gradient(rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url("/coffee-shop/images/bar.jpg") center/cover no-repeat;
 }
 
 .testimonials {
@@ -414,7 +296,7 @@ header {
 .quote {
   font-family: Merriweather, serif;
   padding: 0 1em;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5em;
   font-style: italic;
 }
@@ -507,89 +389,56 @@ header {
   background: #c7a17a;
 }
 
-/* ################ ADITIONAL INFO ################ */
-
-/* .aditional-info {
-  background: #141313;
-  height: auto;
-}
-
-.horizontal-list {
-  margin: auto;
-  width: 70%;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  display: flex;
-  justify-content: space-evenly;
-  color: white;
-}
-
-.horizontal-list h3 {
-  font-family: Oswald, sans-serif;
-  text-transform: uppercase;
-  padding-bottom: 0.5em;
-  font-size: 24px;
-}
-
-.vertical-list {
-  padding-left: 0.4em;
-}
-
-.vertical-list li {
-  font-size: 20px;
-  padding-top: 0.3em;
-  color: rgba(190, 184, 196, 0.9);
-}
-
-.copy-rights {
-  background: #000;
-  display: flex;
-  justify-content: space-between;
-  color: rgba(190, 184, 196, 0.9);
-  padding: 1.5em 2em;
-  font-size: 12px;
-} */
-
 /* ################ MEDIA ################ */
 
+@media screen and (max-width: 1200px) {
+  .title p {
+    font-size: 4em;
+    letter-spacing: 0;
+  }
+  .title i {
+    padding-left: 0.5em;
+  }
+  .welcome {
+    letter-spacing: 0;
+    margin: 0;
+    font-size: 4em;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 2em;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+  .schedule {
+    padding: 0.5em;
+  }
+  .opening-hours .time {
+    white-space: nowrap;
+    padding-left: 1em;
+  }
+  .wifi-wrapper i {
+    margin-top: 0.5em;
+  }
+  .testimonials {
+    width: 100%;
+    padding: 0 2em;
+  }
+  .carousel {
+    height: 300px;
+    overflow: hidden;
+  }
+  .carousel p {
+    font-size: 1.5em;
+  }
+  .schedule ul p {
+    letter-spacing: -1px;
+    font-size: 0.9em;
+  }
+}
+
 @media screen and (max-width: 780px) {
-  /* .nav-ul {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    transform: 0.3s linear;
-  }
-
-  .nav-ul.show {
-    display: flex;
-    align-items: flex-end;
-    transform: 0.3s linear;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-header {
-    width: 100%;
-    align-items: center;
-  }
-
-  .nav-ul ul {
-    transform: 0.3s linear;
-  }
-
-  .nav-ul li {
-    border-bottom: 1px solid #fff;
-    width: 100%;
-    text-align: end;
-    transform: 0.3s linear;
-  }
-
-  body {
-    font-size: 10px;
-  } */
-
   .title p {
     font-size: 3.5em;
     letter-spacing: 0;
@@ -598,5 +447,25 @@ header {
   .welcome {
     letter-spacing: 0;
     margin: 0;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .wifi-wrapper i {
+    margin-top: 0.5em;
+  }
+  .testimonials {
+    width: 100%;
+  }
+  .carousel {
+    height: 350px;
+    overflow: hidden;
+  }
+  .carousel p {
+    font-size: 2em;
+  }
+  .schedule ul p {
+    letter-spacing: -1px;
+    font-size: 0.9em;
   }
 }

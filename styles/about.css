@@ -34,15 +34,27 @@
 }
 
 .content {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  background-color: #ac861e4f;
 }
 
+.content .grid-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 2em;
+  padding-left: 5em;
+}
 .about-caffe {
   display: flex;
+  height: 80%;
   flex-direction: column;
+  justify-content: space-around;
   gap: 1em;
   padding: 2em;
 }
@@ -53,6 +65,13 @@
 
 .about-caffe p {
   color: #646464;
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+  border: 8px solid #3a2109;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 780px) {
