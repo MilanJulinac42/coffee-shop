@@ -14,8 +14,8 @@ const itemsSection = document.querySelector(".items-section");
 
 const item = document.querySelector(".li-item");
 
-let testH = 0;
-let testF = 0;
+let drinksHeight = 0;
+let foodHeight = 0;
 
 let width =
   window.innerWidth ||
@@ -23,15 +23,15 @@ let width =
   document.body.clientWidth;
 
 calculateItemSize = (param) => {
-  testF = 0;
-  testH = 0;
+  foodHeight = 0;
+  drinksHeight = 0;
   foodKids.forEach((element) => {
-    testF +=
+    foodHeight +=
       element.clientHeight +
       (parseFloat(getComputedStyle(element).fontSize) * 4) / param;
   });
   drinkKids.forEach((element) => {
-    testH +=
+    drinksHeight +=
       element.clientHeight +
       (parseFloat(getComputedStyle(element).fontSize) * 4) / param;
   });
@@ -51,7 +51,7 @@ onresize = () => {
     document.documentElement.clientWidth ||
     document.body.clientWidth;
   checkSize();
-  handleClick(foodItems, drinkItems, testH);
+  handleClick(foodItems, drinkItems, drinksHeight);
 };
 
 handleClick = (addItemsClass, removeItemsClass, height) => {
@@ -64,11 +64,11 @@ handleClick = (addItemsClass, removeItemsClass, height) => {
 };
 
 foodButton.addEventListener("click", () => {
-  handleClick(drinkItems, foodItems, testF);
+  handleClick(drinkItems, foodItems, foodHeight);
 });
 
 drinksButtom.addEventListener("click", () => {
-  handleClick(foodItems, drinkItems, testH);
+  handleClick(foodItems, drinkItems, drinksHeight);
 });
 
 checkSize();
