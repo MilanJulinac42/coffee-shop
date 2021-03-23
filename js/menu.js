@@ -4,13 +4,18 @@ const foodButton = document.querySelector(".food-btn");
 const drinkItems = document.querySelector(".coffe-drinks");
 const foodItems = document.querySelector(".food-items");
 
+const drinkKids = document.querySelectorAll(
+  ".coffe-drinks .item-cards .li-item"
+);
+const foodKids = document.querySelectorAll(".food-items .item-cards .li-item");
+
 const menuItems = document.querySelector(".menu-items");
 const itemsSection = document.querySelector(".items-section");
 
 const item = document.querySelector(".li-item");
 
-let foodItemsHeight = 0;
-let drinkItemsHeight = 0;
+let testH = 0;
+let testF = 0;
 
 let width =
   window.innerWidth ||
@@ -18,14 +23,18 @@ let width =
   document.body.clientWidth;
 
 calculateItemSize = (param) => {
-  foodItemsHeight =
-    ((item.offsetHeight + parseFloat(getComputedStyle(item).fontSize) * 4) *
-      8) /
-    param;
-  drinkItemsHeight =
-    ((item.offsetHeight + parseFloat(getComputedStyle(item).fontSize) * 4) *
-      14) /
-    param;
+  testF = 0;
+  testH = 0;
+  foodKids.forEach((element) => {
+    testF +=
+      element.clientHeight +
+      (parseFloat(getComputedStyle(element).fontSize) * 4) / param;
+  });
+  drinkKids.forEach((element) => {
+    testH +=
+      element.clientHeight +
+      (parseFloat(getComputedStyle(element).fontSize) * 4) / param;
+  });
 };
 
 checkSize = () => {
@@ -42,6 +51,7 @@ onresize = () => {
     document.documentElement.clientWidth ||
     document.body.clientWidth;
   checkSize();
+  handleClick(foodItems, drinkItems, testH);
 };
 
 handleClick = (addItemsClass, removeItemsClass, height) => {
@@ -51,15 +61,14 @@ handleClick = (addItemsClass, removeItemsClass, height) => {
   removeItemsClass.classList.add("not-clipped");
   menuItems.style.height = height + "px";
   itemsSection.style.height = height + "px";
-  console.log(height);
 };
 
 foodButton.addEventListener("click", () => {
-  handleClick(drinkItems, foodItems, foodItemsHeight);
+  handleClick(drinkItems, foodItems, testF);
 });
 
 drinksButtom.addEventListener("click", () => {
-  handleClick(foodItems, drinkItems, drinkItemsHeight);
+  handleClick(foodItems, drinkItems, testH);
 });
 
 checkSize();

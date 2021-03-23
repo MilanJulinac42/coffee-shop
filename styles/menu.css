@@ -70,6 +70,10 @@
   display: flex;
 }
 
+.width {
+  width: 100%;
+}
+
 .menu-item-img {
   margin-right: 1em;
   -o-object-fit: contain;
@@ -103,6 +107,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 4em;
+  overflow: hidden;
 }
 
 .menu-items {
@@ -176,6 +181,7 @@
     padding: 0;
     margin: 0;
     width: 100%;
+    overflow-y: hidden;
   }
 
   .top-section {
