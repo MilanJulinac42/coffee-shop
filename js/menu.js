@@ -72,3 +72,4 @@ drinksButtom.addEventListener("click", () => {
 });
 
 checkSize();
+handleClick(foodItems, drinkItems, drinksHeight);
