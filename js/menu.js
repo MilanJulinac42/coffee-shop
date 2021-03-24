@@ -27,14 +27,14 @@ calculateItemSize = (param) => {
   drinksHeight = 0;
   foodKids.forEach((element) => {
     foodHeight +=
-      element.clientHeight +
-      (parseFloat(getComputedStyle(element).fontSize) * 4) / param;
+      element.clientHeight + parseFloat(getComputedStyle(element).fontSize) * 4;
   });
+  foodHeight = foodHeight / param;
   drinkKids.forEach((element) => {
     drinksHeight +=
-      element.clientHeight +
-      (parseFloat(getComputedStyle(element).fontSize) * 4) / param;
+      element.clientHeight + parseFloat(getComputedStyle(element).fontSize) * 4;
   });
+  drinksHeight = drinksHeight / param;
 };
 
 checkSize = () => {

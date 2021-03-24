@@ -112,12 +112,13 @@
 
 .menu-items {
   position: relative;
-  height: 1000px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-content: center;
   overflow: hidden;
+  box-sizing: content-box;
+  padding: 2em 0;
 }
 
 .item-cards .description {
